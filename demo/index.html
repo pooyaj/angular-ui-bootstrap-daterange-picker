@@ -1,33 +1,21 @@
 <!doctype html>
 <html ng-app="testApp">
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
-    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.1.2.js"></script>
-    <script src="ngDateRange.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="../dist/ngDateRange.js"></script>
     <script src="app.js"></script>
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
 
-<style>
-  .full button {
-    background-color: limegreen;
-    border-radius: 32px;
-    color: black;
-  }
-  .partially button span {
-    background-color: orange;
-    border-radius: 32px;
-    color: black;
-  }
-</style>
 <div ng-controller="DaterangeDemoCtrl">
     <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
     <h4>Inline</h4>
     <div style="display:inline-block; min-height:290px;witdh:100px;">
       <!-- uib-datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)"></uib-datepicker -->      
-      <date-range ng-model="range"></date-range>
+      <date-range ng-model="range" options="pickerOptions"></date-range>
       {{range.start}}--{{range.end}}
     </div>
 </div>

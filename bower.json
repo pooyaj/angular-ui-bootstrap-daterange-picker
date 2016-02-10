@@ -1,0 +1,24 @@
+{
+  "name": "angular-daterange-picker",
+  "description": "Angular date range picker",
+  "main": "dist/ngDateRange.js",
+  "authors": [
+    "Pooya Jaferian"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "anuglar",
+    "ui-bootstrap"
+  ],
+  "homepage": "https://github.com/pooyaj/angular-ui-bootstrap-daterange-picker",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests", 
+    "demo", 
+    "src"
+  ]
+}

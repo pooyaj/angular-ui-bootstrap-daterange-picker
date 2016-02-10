@@ -1,0 +1,36 @@
+.well {
+  background-color: #fff;
+}
+.uib-datepicker {
+  background-color: #fff;
+}
+
+.uib-datepicker thead tr:first-child {
+  border-bottom: solid #000 2px;
+}
+
+.uib-daypicker button {
+  border: 0px !important;
+  cursor: pointer;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+} 
+
+.uib-day {
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #fff;
+  border-top: #fff solid 4px;  
+}
+
+.full-end, .full-start {
+  background-color: #e14542;
+  color: white;
+  border-radius: 5px;  
+}
+
+.partially {
+  background-color: #f4f4f4;
+  color: black;
+}

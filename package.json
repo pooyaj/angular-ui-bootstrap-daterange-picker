@@ -1,0 +1,29 @@
+{
+  "name": "angular-calendar",
+  "version": "1.0.0",
+  "description": "Angular date range picker",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pooyaj/angular-ui-bootstrap-daterange-picker.git"
+  },
+  "keywords": [
+    "anuglar",
+    "ui-bootstrap"
+  ],
+  "author": "Pooya Jaferian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pooyaj/angular-ui-bootstrap-daterange-picker/issues"
+  },
+  "homepage": "https://github.com/pooyaj/angular-ui-bootstrap-daterange-picker#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-jshint": "^0.12.0",
+    "grunt-contrib-uglify": "^0.11.1"
+  }
+}
