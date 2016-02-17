@@ -33,7 +33,6 @@
           return;
         }
         var dateRange = ngModel.$viewValue;
-        console.log(dateRange);
         if (!dateRange.start || dateRange.start > scope.dt) {
           dateRange.start = scope.dt;
           ngModel.$setViewValue(dateRange);

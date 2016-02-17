@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-          {expand: true, src: ['./src/ngDateRange.js'], dest: 'dist/'},
+          {expand: true, flatten: true, src: ['./src/ngDateRange.js'], dest: 'dist'},
         ],
       },
     },

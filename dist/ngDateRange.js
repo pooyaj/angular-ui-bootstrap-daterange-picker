@@ -5,8 +5,13 @@
     return {
       restrict: 'AE',
   require: 'ngModel',
-  template: '<uib-datepicker ng-model="dt" min-date="minDate" show-weeks="false" class="well well-sm" custom-class="getDayClass(date, mode)"></uib-datepicker>',
+  template: '<uib-datepicker ng-model="dt" init-date="initVal" show-weeks="false" class="" custom-class="getDayClass(date, mode)"></uib-datepicker>',
+  scope: {
+    init: '='
+  },
   link: function (scope, elem, attrs, ngModel) {
+    if (scope.init && typeof scope.init.getTime === "function")
+      scope.initVal = new Date(scope.init.getTime());    
     scope.getDayClass = function (date, mode) {
         var dateRange = ngModel.$viewValue;
         if (mode === 'day') {
@@ -17,7 +22,7 @@
             return 'full-start';
           } else if (dayToCheck === end) {
             return 'full-end';
-          } else if (dayToCheck > start && dayToCheck < end) {
+          } else if (start && end && dayToCheck > start && dayToCheck < end) {
             return 'partially';
           };
         }
@@ -32,7 +37,13 @@
           dateRange.start = scope.dt;
           ngModel.$setViewValue(dateRange);
         } else {
-          dateRange.end = scope.dt;
+          scope.dt.setHours(23, 59, 59, 59)
+          if (dateRange.end && dateRange.end.getTime() === scope.dt.getTime()) {
+             dateRange.end = void 0;
+             dateRange.start = void 0;
+          } else {
+            dateRange.end = scope.dt;  
+          }          
           ngModel.$setViewValue(dateRange);
         }
         scope.dt = null;
