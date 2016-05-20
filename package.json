@@ -1,6 +1,6 @@
 {
   "name": "angular-calendar",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Angular date range picker",
   "main": "app.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/pooyaj/angular-ui-bootstrap-daterange-picker.git"
   },
   "keywords": [
-    "anuglar",
+    "angular",
     "ui-bootstrap"
   ],
   "author": "Pooya Jaferian",
