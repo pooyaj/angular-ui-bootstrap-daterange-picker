@@ -46,8 +46,13 @@
         // This will allow us to control the component externally
         scope.$watch('externalModel', function () {
           if (!scope.externalModel.start && !scope.externalModel.end) {
-            // if the model got cleared then reflect that in the view
-            scope.dt = undefined; // null doesn't work!
+            // 'dt' is undefined when loading the component for the first time
+            // so we set it to a falsy vakue to triger the dt 'watch'
+            if (scope.dt === undefined) {
+              scope.dt = null;
+            } else {
+              scope.dt = undefined;
+            }
           }
         });
       }
